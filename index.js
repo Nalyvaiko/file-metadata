@@ -44,8 +44,9 @@ app.use((req, res) => {
     res.status(404).json({ error: 'Not Found' });
 });
 
-const server = app.listen(port, () => {
-    console.log('App listening on port ' + port);
+const PORT = process.env.PORT || 3000;
+const server = app.listen(PORT, () => {
+    console.log('App listening on port ' + PORT);
 });
 
 const shutdown = () => {
